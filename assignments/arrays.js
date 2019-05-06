@@ -122,6 +122,9 @@ for (let i = 0; i < inventory.length; i++) {
         oldCars.push(inventory[i].id);
     }
 }
+// trying json.stringify. what am I doing wrong? when I look at the console, it's not converting the numbers to strings
+JSON.stringify(oldCars);
+console.log(oldCars);
 // logging oldCars's length
 console.log(oldCars.length); 
 
@@ -135,7 +138,7 @@ for (let i = 0; i < inventory.length; i++) {
         BMWAndAudi.push(inventory[i]['car_model']);
     }
 }
-// using JSON.stringify method. I think this makes the elements into strings? read up on it, but don't quite see what's the point.
+// using JSON.stringify method. I don't understand whether it's working. I also think it converts stuff to strings?
 JSON.stringify(BMWAndAudi);
 
 // logging BMWAndAudi 
