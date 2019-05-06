@@ -64,29 +64,37 @@ let inventory = [{"id":1,"car_make":"Lincoln","car_model":"Navigator","car_year"
 // ==== Challenge 1 ====
 // The dealer can't recall the information for a car with an id of 33 on his lot. Help the dealer find out which car has an id of 33 by logging the car's year, make, and model in the console log provided to you below:
 // actual logging substituting in strings
-console.log(`Car 33 is a *2011* *Jeep* *Wrangler*`);
-// creating variables for year,make,model
-let car33year = '';
-let car33make = '';
-let car33model = '';
-// creating for loop that updates values when id === 33. 
-for (let i = 0; i < inventory.length; i++) {
-    if (inventory[i]['id'] === 33) {
-        car33year = inventory[i]['car_year'];
-        car33make = inventory[i]['car_make'];
-        car33model = inventory[i]['car_model'];
-        // logs sentence 
-        console.log(`Car 33 is a ` + car33year + ' ' + car33make + ' ' + car33model + '.');
-    }
-}
+// console.log(`Car 33 is a *2011* *Jeep* *Wrangler*`);
+// // creating variables for year,make,model
+// let car33year = '';
+// let car33make = '';
+// let car33model = '';
+// // creating for loop that updates values when id === 33. 
+// for (let i = 0; i < inventory.length; i++) {
+//     if (inventory[i]['id'] === 33) {
+//         car33year = inventory[i]['car_year'];
+//         car33make = inventory[i]['car_make'];
+//         car33model = inventory[i]['car_model'];
+//         // logs sentence 
+//         console.log(`Car 33 is a ` + car33year + ' ' + car33make + ' ' + car33model + '.');
+//     }
+// }
+
+
+// better method 
+console.log(`Car 33 is a ${inventory[32].car_year} ${inventory[32].car_make} ${inventory[32].car_model}`)
 
 // ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
 // assigning lastCar to last item in the array
-let lastCar = 0;
-lastCar = inventory.length-1;
+// let lastCar = 0;
+// lastCar = inventory.length-1;
 // logging via bracket notation
-console.log("Last Car's make: " + inventory[lastCar]['car_make'] + ". Last Car's model: " + inventory[lastCar]['car_model']);
+// console.log("Last Car's make: " + inventory[lastCar]['car_make'] + ". Last Car's model: " + inventory[lastCar]['car_model']);
+
+// better method 
+let lastCar = inventory[inventory.length-1];
+console.log(lastCar.car_make,lastCar.car_model);
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
@@ -123,6 +131,7 @@ for (let i = 0; i < inventory.length; i++) {
     }
 }
 // trying json.stringify. what am I doing wrong? when I look at the console, it's not converting the numbers to strings
+console.log(oldCars);
 JSON.stringify(oldCars);
 console.log(oldCars);
 // logging oldCars's length
